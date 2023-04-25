@@ -5,10 +5,10 @@ contract answer15 {
     uint public foo;
 
     // TODO: Declare a constructor to get 2 input parameters (first is for owner, second is for foo)
-    constructor() payable {
+    constructor(address _owner, uint _foo) payable {
         // TODO: And in the constructor, you should give 2 input parameters to the owner and foo respectively
-        owner = msg.sender;
-        foo = 1;
+        owner = _owner;
+        foo = _foo;
     }
 
     function getOwner() public view returns (address) {
